@@ -1,7 +1,10 @@
-# 🤖 TikTok Live Auto Comment Bot
+# 🤖 TikTok Live Auto Comment Bot — Selenium Python
 
 Bot otomatis untuk mengirim komentar di TikTok Live menggunakan Selenium dan Chrome DevTools Protocol.
 
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![Selenium](https://img.shields.io/badge/Selenium-4.x-green)
+![Stars](https://img.shields.io/github/stars/Renohidayat/tiktok-live-bot)
 ---
 
 ## 📋 Daftar Isi
@@ -249,9 +252,7 @@ Bisa. Ganti `--user-data-dir` ke folder berbeda untuk setiap akun:
 ```bash
 chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\ChromeAkun2"
 ```
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![Selenium](https://img.shields.io/badge/Selenium-4.x-green)
-![Stars](https://img.shields.io/github/stars/username/tiktok-live-bot)
+
 ---
 
 ## ⚠️ Peringatan
