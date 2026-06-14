@@ -47,7 +47,7 @@ pip install selenium
 2. Download ChromeDriver yang sesuai di: https://chromedriver.chromium.org/downloads
 3. Simpan `chromedriver.exe` ke folder project:
    ```
-   C:\Users\hi\Documents\Projeck\Komentar Otomatis Tiktok\chromedriver.exe
+   C:\Users\hi\Documents\Projeck\Komentar_Otomatis_Tiktok\chromedriver.exe
    ```
 
 ### 3. Buka Chrome dengan Remote Debugging
