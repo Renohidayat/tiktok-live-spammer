@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-CHROMEDRIVER_PATH = r"C:\Users\hi\Documents\Projeck\Komentar Otomatis Tiktok\chromedriver.exe"
+CHROMEDRIVER_PATH = r"C:\Users\hi\Documents\Projeck\tiktok-live-spammer\chromedriver.exe"
 
 KOMENTAR_LIST = [
     "LB SATSET ABANGKU 🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶",
@@ -15,7 +15,6 @@ options = webdriver.ChromeOptions()
 options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(service=Service(CHROMEDRIVER_PATH), options=options)
 
-# Pindah ke tab TikTok Live
 for handle in driver.window_handles:
     driver.switch_to.window(handle)
     if "tiktok.com" in driver.current_url and "live" in driver.current_url:
@@ -27,8 +26,6 @@ time.sleep(2)
 def kirim_komentar(teks):
     try:
         input_box = driver.find_element(By.CSS_SELECTOR, '[data-e2e="room-chat-input-field"]')
-        
-        # Clear + isi + kirim via JavaScript semua sekaligus
         driver.execute_script(
             """
             var el = arguments[0];
@@ -40,12 +37,10 @@ def kirim_komentar(teks):
             """,
             input_box, teks
         )
-
-        time.sleep(0.1)  # minimal tunggu DOM update
+        time.sleep(0.1)
         input_box.send_keys(Keys.RETURN)
         print(f"✅ {teks[:45]}...")
         return True
-
     except Exception as e:
         print(f"❌ Gagal: {e}")
         return False
@@ -58,4 +53,4 @@ while True:
     komentar = KOMENTAR_LIST[index % len(KOMENTAR_LIST)]
     kirim_komentar(komentar)
     index += 1
-    time.sleep(0.5)  # ← jeda hanya 0.5 detik
+time.sleep(0.5)  # ← jeda hanya 0.5 detik
