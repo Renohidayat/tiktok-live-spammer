@@ -50,12 +50,12 @@ pip install selenium
    C:\Users\hi\Documents\Projeck\Komentar_Otomatis_Tiktok\chromedriver.exe
    ```
 
-### 3. Buka Chrome dengan Remote Debugging
+### 3. Buka Brave dengan Remote Debugging
 
 Buka **Command Prompt** dan jalankan perintah ini:
 
-```bash
-"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\ChromeDebug"
+```bash"
+C:\Users\hi\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe" --remote-debugging-port=9222 --profile-directory=Default
 ```
 
 > ⚠️ Jangan tutup CMD ini selama bot berjalan!
